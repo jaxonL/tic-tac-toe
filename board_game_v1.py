@@ -12,8 +12,6 @@ from scipy.misc import central_diff_weights
 board = [[None]*3 for _ in range(3)]
 current_player = 1 # player 1 takes first turn, player 2 takes second turn
 turn_number = 0
-board_size = 600
-board_line_width = 7
 
 pg.init()
 fps = 30
