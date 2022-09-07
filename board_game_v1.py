@@ -129,22 +129,9 @@ def draw_result(result):
 def draw_step(mouse_pos):
     global current_player, board, turn_number
     mouse_x, mouse_y = mouse_pos
-    if mouse_x < board_square_size:
-        column = 0
-    elif mouse_x < 2 * board_square_size:
-        column = 1
-    else:
-        column = 2
-    
-    if mouse_y < board_square_size:
-        row = 0
-    elif mouse_y < 2 * board_square_size:
-        row = 1
-    else:
-        row = 2
     # the above if statements can be replaced by the 2 following lines:
-    # index_x = mouse_x // board_square_size
-    # index_y = mouse_y // board_square_size
+    column = mouse_x // board_square_size
+    row = mouse_y // board_square_size
 
     # check if we have drawn already at this square
     if board[row][column] is not None:
