@@ -5,6 +5,7 @@ import sys
 import time
 
 import colors
+from constants import *
 
 from scipy.misc import central_diff_weights
 
@@ -13,12 +14,6 @@ current_player = 1 # player 1 takes first turn, player 2 takes second turn
 turn_number = 0
 board_size = 600
 board_line_width = 7
-
-game_window_width = 900
-game_window_length = 600
-game_scene_menu_column_width = game_window_width - board_size
-game_scene_button_center_x = game_scene_menu_column_width / 2 + board_size
-board_square_size = 200
 
 pg.init()
 fps = 30
